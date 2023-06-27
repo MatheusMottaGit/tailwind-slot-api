@@ -1,12 +1,14 @@
 import React from 'react'
 import { tv } from 'tailwind-variants'
+import Button from './Button'
+import Sizes from './Sizes'
 
 const container = tv({
-  base: "w-full h-full rounded-xl flex items-center justify-center gap-4 "
+  base: "w-full h-full rounded-xl flex items-center justify-center gap-12"
 })
 
 const productImg = tv({
-  base: "h-full w-52 bg-blue-700 p-4 rounded-xl"
+  base: "h-full w-80 bg-blue-700 p-4 rounded-xl"
 })
 
 const productDescription = tv({
@@ -19,7 +21,7 @@ const Prod = () => {
       <div className={productImg()}></div>
 
       <div className={productDescription()}>
-        <h1 className='font-bold text-2xl'>
+        <h1 className='font-bold text-3xl'>
           Nike Adapt BB 2.0
         </h1>
 
@@ -31,7 +33,9 @@ const Prod = () => {
           <p className='text-xl text-green-600'>20% off</p>
         </span>
 
-        
+        <Sizes />
+
+        <Button />
       </div>
     </div>
   )
