@@ -13,7 +13,7 @@ const container = tv({
 })
 
 const productImg = tv({
-  base: "h-full w-80 bg-blue-700 p-4 rounded-xl", 
+  base: "h-full w-80 rounded-xl", 
   variants: {
     size: {
       full: "h-full w-72"
@@ -31,6 +31,7 @@ const Prod = () => {
       <Image 
         alt=''
         src={shoe}
+        className={productImg({size: 'full'})}
       />
 
       <div className={productDescription()}>
